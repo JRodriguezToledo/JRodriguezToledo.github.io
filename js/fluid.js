@@ -1363,18 +1363,34 @@ function correctRadius (radius) {
     return radius;
 }
 
-// Input: the cursor stirs the fluid without clicking; touch does not block page scrolling.
+// Input: the fluid only moves while the mouse button is held down and dragged.
+// On touch screens a finger drag stirs it (and the page still scrolls).
+let mouseHeld = false;
 function pointerAt(clientX, clientY, id) {
     const r = canvas.getBoundingClientRect();
     if (clientY < r.top || clientY > r.bottom || clientX < r.left || clientX > r.right) return false;
     const x = scaleByPixelRatio(clientX - r.left), y = scaleByPixelRatio(clientY - r.top);
     let p = pointers.find(q => q.id == id);
     if (p == null) { p = new pointerPrototype(); pointers.push(p); }
-    if (!p.down) updatePointerDownData(p, id, x, y); else { updatePointerMoveData(p, x, y); if (Math.random() < 0.03) p.color = generateColor(); }
+    if (!p.down) updatePointerDownData(p, id, x, y);
+    else { updatePointerMoveData(p, x, y); if (Math.random() < 0.03) p.color = generateColor(); }
     return true;
 }
-window.addEventListener('mousemove', e => { if (!REDUCED) pointerAt(e.clientX, e.clientY, -1); });
-canvas.addEventListener('mouseleave', () => { const p = pointers.find(q => q.id == -1); if (p) updatePointerUpData(p); });
+function releaseMouse() {
+    mouseHeld = false;
+    const p = pointers.find(q => q.id == -1); if (p) updatePointerUpData(p);
+}
+window.addEventListener('mousedown', e => {
+    if (REDUCED || e.button !== 0) return;
+    const onSky = e.target === canvas || (e.target.closest && e.target.closest('.hero') && !e.target.closest('a'));
+    if (!onSky) return;
+    e.preventDefault();               // no text selection while dragging
+    mouseHeld = true;
+    pointerAt(e.clientX, e.clientY, -1);
+});
+window.addEventListener('mousemove', e => { if (mouseHeld) pointerAt(e.clientX, e.clientY, -1); });
+window.addEventListener('mouseup', releaseMouse);
+window.addEventListener('blur', releaseMouse);
 window.addEventListener('touchmove', e => {
     if (REDUCED) return;
     for (const t of e.touches) pointerAt(t.clientX, t.clientY, t.identifier);
@@ -1425,7 +1441,7 @@ function correctDeltaY (delta) {
 const PALETTE = [[0.22, 0.62, 0.95], [0.35, 0.78, 1.0], [0.62, 0.82, 1.0], [0.18, 0.45, 0.85], [1.0, 0.42, 0.17]];
 function generateColor () {
     const c = PALETTE[Math.random() < 0.12 ? 4 : Math.floor(Math.random() * 4)];
-    return { r: c[0] * 0.3, g: c[1] * 0.3, b: c[2] * 0.3 };
+    return { r: c[0] * 0.2, g: c[1] * 0.2, b: c[2] * 0.2 };
 }
 
 function HSVtoRGB (h, s, v) {

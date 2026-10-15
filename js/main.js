@@ -27,12 +27,10 @@
     if (reduced || !window.gsap) {
       chars.forEach(function (c) { c.style.opacity = 1; });
       rest.forEach(function (q) { var e = document.querySelector(q); if (e) e.style.opacity = 1; });
-      if (window.fluid) window.fluid.pass();
       return;
     }
     var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.add(function () { window.fluid && window.fluid.pass(); }, 0.15)
-      .fromTo(chars, { opacity: 0, yPercent: 60, rotate: 3 }, { opacity: 1, yPercent: 0, rotate: 0, duration: 0.9, stagger: 0.035 }, 0.25)
+    tl.fromTo(chars, { opacity: 0, yPercent: 60, rotate: 3 }, { opacity: 1, yPercent: 0, rotate: 0, duration: 0.9, stagger: 0.035 }, 0.25)
       .fromTo('.where', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6 }, 0.2)
       .fromTo('.lede', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.8 }, 1.0)
       .fromTo(['.nav', '.hint'], { opacity: 0 }, { opacity: 1, duration: 0.8 }, 1.5);
@@ -40,9 +38,6 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setTimeout(intro, 80); });
   else intro();
   setTimeout(intro, 2500);
-  if (window.fluid && !reduced) window.fluid.seed();
-  // A gentle wake every so often while the hero is on screen
-  if (!reduced) setInterval(function () { if (window.scrollY < window.innerHeight * 0.6 && window.fluid) window.fluid.pass(); }, 15000);
 
   /* ---------- Sector occupancy simulation (illustrative) ---------- */
   var canvas = document.getElementById('chart');
