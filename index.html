@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jorge Rodríguez Toledo – Data, AI and air traffic</title>
+<meta name="description" content="Physicist working on data science, machine learning and generative AI. Master's thesis on how flight delays spread through the aviation network.">
+<meta name="theme-color" content="#0b1b2e">
+<link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="hero" id="top">
+  <canvas id="fluid" aria-hidden="true"></canvas>
+  <nav class="nav" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#background">Background</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hero-text">
+    <p class="where">Las Palmas de Gran Canaria. Open to relocate.</p>
+    <h1 id="name">Jorge Rodríguez Toledo</h1>
+    <p class="lede" id="lede">I model complex systems with data and AI. Right now I study how delays spread through the European air network.</p>
+    <p class="hint" id="hint">Move your cursor across the sky.</p>
+  </div>
+</header>
+
+<main>
+  <section class="band" id="about" aria-labelledby="about-h">
+    <div class="wrap grid">
+      <div class="aboutleft"><h2 id="about-h">Why aviation, why data</h2>
+        <img class="portrait" src="assets/photo.jpg" width="360" height="505" alt="Portrait of Jorge Rodríguez Toledo in a suit and tie" loading="lazy"></div>
+      <div class="prose">
+        <p>As a kid I wanted to be a pilot. I chose theoretical physics instead because hard problems and abstract ideas keep me going, but I never lost my interest in aircraft. Air traffic management is where the two meet: a huge system where good analysis changes real decisions.</p>
+        <p>I am finishing an MSc in Physics of Complex Systems at IFISC, University of the Balearic Islands. My thesis uses machine and deep learning on EUROCONTROL data to predict flight delays and how they propagate through the aviation network. In summer 2026 I worked at Grupo Viajes El Corte Inglés, where I built a support agent with retrieval-augmented generation and helped take a churn model into production.</p>
+        <dl class="facts">
+          <div><dt>Looking for</dt><dd>Data science, machine learning and generative AI roles, and data work in aviation and air traffic management. Remote or hybrid, full-time, anywhere. Europe first.</dd></div>
+          <div><dt>Available</dt><dd>From early 2027, once my master's is finished in December 2026.</dd></div>
+          <div><dt>Languages</dt><dd>Spanish (native), English (C1, Cambridge), French (intermediate).</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <h2 id="work-h" class="solo">Selected work</h2>
+
+      <article class="feature" aria-labelledby="thesis-h">
+        <div class="grid">
+          <div>
+            <h3 id="thesis-h">Master's thesis: how delays spread through the air network</h3>
+            <p class="status">In progress, due December 2026</p>
+          </div>
+          <div class="prose">
+            <p>Flight delays do not stay where they start: a late aircraft delays the next flight, and the knock-on effect travels through airports and sectors. I am building machine and deep learning models that predict delays and how they propagate along the network, using EUROCONTROL data, so that operations and air traffic management stakeholders can decide better.</p>
+            <p>The work is advanced Python for the numerical results and visualisations, plus the technical documentation. I will share results here if the thesis allows it.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="sim" aria-labelledby="sim-h">
+        <div class="grid">
+          <div>
+            <h3 id="sim-h">Try it: a sector fills up</h3>
+            <p class="muted">A small in-browser version of the model in my AirTrafficOccupancy project. The numbers are illustrative, not results.</p>
+            <div class="controls">
+              <label for="peak">Peak arrivals per hour <output id="peakOut">36</output></label>
+              <input id="peak" type="range" min="10" max="60" value="36">
+              <label for="cap">Capacity, aircraft in the sector <output id="capOut">12</output></label>
+              <input id="cap" type="range" min="4" max="30" value="12">
+              <button id="again" type="button">Run new random days</button>
+            </div>
+            <p class="readout" id="readout" aria-live="polite"></p>
+          </div>
+          <div>
+            <canvas id="chart" role="img" aria-label="Aircraft in the sector over two days for 30 simulated runs, with the capacity line"></canvas>
+            <p class="small muted">Thin lines are 30 random runs over two days. The white line is their average. Aircraft arrive faster in the morning and evening and each one leaves at a fixed rate. The orange line is capacity. The full Julia version runs 1,000 trajectories over one and three weeks and tracks the extra cost of congestion.</p>
+          </div>
+        </div>
+      </article>
+
+      <h3 class="list-h">Projects on GitHub</h3>
+      <ul class="projects">
+        <li>
+          <div><h4>Air-traffic sector occupancy</h4><p class="muted">Julia</p></div>
+          <p>A stochastic model of how demand and limited capacity create congestion in a control sector. Kinetic Monte Carlo with an arrival rate that depends on the hour and the day of the week, ensembles of 1,000 trajectories, overload probability and the cost of congestion on busy and quiet days.</p>
+          <a href="https://github.com/JRodriguezToledo/AirTrafficOccupancy">View on GitHub<span class="sr"> (AirTrafficOccupancy)</span></a>
+        </li>
+        <li>
+          <div><h4>Hospital readmission prediction</h4><p class="muted">Python</p></div>
+          <p>Eight classifiers, from logistic regression to XGBoost, compared on 5,000 diabetic patient records. A cost matrix penalises missed readmissions, and models are chosen by cross-validated performance, with ROC curves, confusion matrices and feature importance.</p>
+          <a href="https://github.com/JRodriguezToledo/HospitalReadmissionPrediction">View on GitHub<span class="sr"> (HospitalReadmissionPrediction)</span></a>
+        </li>
+        <li>
+          <div><h4>Character-level text prediction</h4><p class="muted">Python, TensorFlow</p></div>
+          <p>A simple RNN, a GRU and a two-layer LSTM, each with and without self-attention, trained on Shakespeare to predict the next character. Six models in one reproducible notebook, with weights and training histories included.</p>
+          <a href="https://github.com/JRodriguezToledo/Character-LevelTextPrediction">View on GitHub<span class="sr"> (Character-LevelTextPrediction)</span></a>
+        </li>
+        <li>
+          <div><h4>The Greeks</h4><p class="muted">Python</p></div>
+          <p>A sensitivity analysis of the Black–Scholes model: analytical Greeks, the trade-off between gamma and theta, dynamic delta hedging over 252 trading days, a gamma-squeeze Monte Carlo, and Greeks from a live SPY options chain.</p>
+          <a href="https://github.com/JRodriguezToledo/TheGreeksOptionAnalysis">View on GitHub<span class="sr"> (TheGreeksOptionAnalysis)</span></a>
+        </li>
+        <li>
+          <div><h4>Western US power grid</h4><p class="muted">Python</p></div>
+          <p>How robust is a real power grid? Clustering, distances, centrality and community detection, compared against Erdős–Rényi and Barabási–Albert random networks.</p>
+          <a href="https://github.com/JRodriguezToledo/PowerGridNetworkAnalysis">View on GitHub<span class="sr"> (PowerGridNetworkAnalysis)</span></a>
+        </li>
+        <li>
+          <div><h4>2D Ising model</h4><p class="muted">Julia</p></div>
+          <p>Metropolis Monte Carlo on a periodic lattice: energy, magnetisation, heat capacity and susceptibility, the critical temperature and exponents, and finite-size scaling with data collapse.</p>
+          <a href="https://github.com/JRodriguezToledo/2DIsingModel">View on GitHub<span class="sr"> (2DIsingModel)</span></a>
+        </li>
+      </ul>
+
+      <h3 class="list-h">Built at work, not public</h3>
+      <ul class="projects">
+        <li>
+          <div><h4>Support agent for business teams</h4><p class="muted">Grupo Viajes El Corte Inglés, MVP</p></div>
+          <p>An LLM application with a retrieval-augmented generation system. Business workers ask it instead of reading long documentation, and technicians stop solving the same problem again and again: the agent either fixes it or gives the user the steps. I designed the evaluation pipeline (an LLM judge, evaluation of the retrieved sources, prompt engineering) and connected databases with SQL in BigQuery, documents, search engines and APIs, including through MCP and A2A. It runs on Google ADK, Gemini Enterprise and Azure, over 18 technical documents and about 9,000 historical support tickets.</p>
+        </li>
+        <li>
+          <div><h4>Customer churn model</h4><p class="muted">Grupo Viajes El Corte Inglés, in production</p></div>
+          <p>A customer-lifetime-value churn model that helps the Business department take strategy decisions based on sales probabilities. I tuned, calibrated and evaluated it in Databricks, and used feature analysis to find what drives the number of purchases before a customer leaves.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="background" aria-labelledby="bg-h">
+    <div class="wrap grid">
+      <h2 id="bg-h">Background</h2>
+      <div>
+        <ol class="timeline">
+          <li><time>Sep 2025 to Dec 2026</time><div><strong>MSc Physics of Complex Systems</strong><br>Universitat de les Illes Balears, IFISC. Thesis on delay prediction in aviation networks.</div></li>
+          <li><time>Jun to Sep 2026</time><div><strong>Data scientist intern, Advanced Analytics</strong><br>Grupo Viajes El Corte Inglés, Palma de Mallorca.</div></li>
+          <li><time>Sep 2021 to Jun 2025</time><div><strong>BSc Physics, theoretical physics</strong><br>Universidad Complutense de Madrid, GPA 8.11/10. Final thesis on DFT simulations of oxide semiconductors graded 10 with honours. Erasmus+ at the University of Amsterdam, 2023 to 2024.</div></li>
+          <li><time>Jan 2021 to Jun 2025</time><div><strong>Private tutor</strong><br>Mathematics, physics and chemistry for high-school students.</div></li>
+          <li><time>Graduated Jun 2021</time><div><strong>A Levels</strong><br>British School of Gran Canaria. Physics, Mathematics, Chemistry (A*) and Biology (A). Silver award in the UK Intermediate Mathematical Challenge, 2019.</div></li>
+        </ol>
+        <h3 class="list-h">Tools</h3>
+        <dl class="tools">
+          <div><dt>Programming</dt><dd>Python (advanced), SQL, Git, Julia, MATLAB</dd></div>
+          <div><dt>Machine learning and AI</dt><dd>PyTorch, TensorFlow, scikit-learn, PySpark, LLM applications, RAG, LLM-as-judge evaluation, prompt engineering, Google ADK, MCP, A2A</dd></div>
+          <div><dt>Platforms</dt><dd>Databricks, BigQuery, GCP, Azure, Gemini Enterprise, Jira, Confluence, Workday, Microsoft Teams, SharePoint, OneDrive, LaTeX</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="contact" aria-labelledby="contact-h">
+    <div class="wrap grid">
+      <h2 id="contact-h">Get in touch</h2>
+      <div class="prose">
+        <p>If you are hiring for data science, machine learning, generative AI or aviation data work, I would like to hear from you. I can send my CV on request.</p>
+        <p class="links">
+          <a class="big" href="mailto:jorgerodrigueztoledo03@gmail.com">jorgerodrigueztoledo03@gmail.com</a><br>
+          <a class="phone" href="tel:+34618080983">+34 618 08 09 83</a><br>
+          <a href="https://www.linkedin.com/in/jorgerodrigueztoledo">LinkedIn</a>
+          <a href="https://github.com/JRodriguezToledo">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>The sky above is a fluid simulation adapted from Pavel Dobryakov's <a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation">WebGL-Fluid-Simulation</a> (MIT licence). Animation by <a href="https://gsap.com">GSAP</a>.</p>
+  </div>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/fluid.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
