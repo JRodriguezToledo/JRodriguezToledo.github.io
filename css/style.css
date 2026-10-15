@@ -74,9 +74,9 @@ button:hover { background:#ff8450 }
 
 /* background */
 .timeline { list-style:none; margin:0; padding:0 }
-.timeline li { display:grid; grid-template-columns:9.5rem 1fr; gap:1.2rem; padding:0 0 1.6rem; margin:0 0 1.6rem; border-bottom:1px solid var(--line) }
+.timeline li { display:grid; grid-template-columns:11.5rem 1fr; gap:1.2rem; padding:0 0 1.6rem; margin:0 0 1.6rem; border-bottom:1px solid var(--line) }
 .timeline li:last-child { border-bottom:0; margin-bottom:0 }
-.timeline time { color:var(--dusk); font-weight:600; font-size:.95rem }
+.timeline time { white-space:nowrap; color:var(--dusk); font-weight:600; font-size:.95rem }
 .tools { margin:0; display:grid; gap:1rem }
 .links a { margin-right:1.4rem; font-weight:600 }
 .links .big { font-family:var(--head); font-size:clamp(1.3rem,3vw,2rem); font-weight:700; margin-right:0; display:inline-block; margin-bottom:.8rem }
