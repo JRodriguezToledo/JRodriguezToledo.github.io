@@ -127,3 +127,16 @@ dialog.lb button { margin-top:.8rem }
 
 .anims { grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.6rem; max-width:940px }
 @media (max-width:700px) { .anims { grid-template-columns:1fr } }
+
+/* generated texts, thesis note, animation groups */
+.samples { grid-column:1 / -1; margin-top:.4rem }
+.samples > p { margin:0 0 .8rem; max-width:70ch; font-size:.95rem }
+.sample-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem }
+.sample-grid figure { margin:0 }
+.sample-grid .sname { margin:0 0 .35rem; font-weight:600; font-size:.95rem; color:var(--ink) }
+.sample-grid pre { margin:0; padding:.9rem 1rem; background:#fff; border:1px solid var(--line); border-radius:4px; font:.84rem/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; white-space:pre-wrap; overflow-wrap:anywhere; height:100% }
+.note { color:var(--dusk); font-size:.9rem; align-self:start }
+h4.agroup { margin:1.8rem 0 .8rem; font-size:1.1rem }
+.anims.one { grid-template-columns:minmax(0,calc(50% - .8rem)) }
+.anims video { aspect-ratio:4 / 3 }
+@media (max-width:820px) { .sample-grid { grid-template-columns:1fr } .anims.one { grid-template-columns:1fr } }
