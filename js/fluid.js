@@ -1529,7 +1529,7 @@ window.fluid = {
             if (i >= n) return;
             const t = i / n;
             const y = 0.62 + 0.05 * Math.sin(t * 5.0);
-            const c = generateColor(); c.r *= 0.7; c.g *= 0.7; c.b *= 0.7;
+            const c = generateColor(); c.r *= 1.1; c.g *= 1.1; c.b *= 1.1;
             splat(0.04 + t * 0.92, y, 2600 + Math.random() * 600, (Math.random() - 0.5) * 520, c);
             i++;
             if (REDUCED) tick(); else requestAnimationFrame(tick);
