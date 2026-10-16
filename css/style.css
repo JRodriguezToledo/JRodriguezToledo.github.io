@@ -98,3 +98,19 @@ button:hover { background:#ff8450 }
   html { scroll-behavior:auto }
   .js h1 .ch, .js .where, .js .lede, .js .hint, .js .nav { opacity:1 }
 }
+
+/* project figures */
+.projects li > .figs { grid-column:1 / -1; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.2rem; margin-top:.5rem }
+.projects li > .figs.one { grid-template-columns:minmax(260px,calc(50% - .6rem)) }
+.figs figure { margin:0 }
+.figs figcaption { margin-top:.5rem; font-size:.9rem; color:var(--dusk); max-width:52ch }
+.figs button.fig, .figs button.fig:hover { display:block; width:100%; margin:0; padding:0; background:#fff; color:inherit; border:1px solid var(--line); border-radius:4px; cursor:zoom-in; overflow:hidden }
+.figs button.fig:hover { border-color:var(--dusk) }
+.figs img { display:block; width:100%; height:auto }
+.list-h.first { margin-top:0 }
+dialog.lb { border:0; padding:0; background:transparent; max-width:min(96vw,1240px); width:100%; color:#eaf2fa; text-align:center }
+dialog.lb::backdrop { background:rgba(11,27,46,.88) }
+dialog.lb img { display:block; max-width:100%; max-height:80vh; width:auto; height:auto; margin:0 auto; background:#fff; border-radius:4px }
+dialog.lb p { margin:.8rem auto 0; max-width:70ch }
+dialog.lb button { margin-top:.8rem }
+@media (max-width:820px) { .projects li > .figs.one { grid-template-columns:1fr } }

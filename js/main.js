@@ -43,6 +43,20 @@
   // A gentle wake every so often while the hero is on screen, to show the sky is alive; click and drag stirs it
   if (!reduced) setInterval(function () { if (window.scrollY < window.innerHeight * 0.6 && window.fluid) window.fluid.pass(); }, 15000);
 
+  /* ---------- Click a project figure to enlarge it ---------- */
+  var lb = document.getElementById('lb');
+  if (lb && lb.showModal) {
+    var lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('button.fig');
+      if (b) {
+        lbImg.src = b.getAttribute('data-full'); lbImg.alt = b.querySelector('img').alt; lbCap.textContent = b.getAttribute('data-cap') || '';
+        lb.showModal(); return;
+      }
+      if (e.target === lb || e.target.id === 'lbClose' || e.target === lbImg) lb.close();
+    });
+  }
+
   /* ---------- Sector occupancy simulation (illustrative) ---------- */
   var canvas = document.getElementById('chart');
   if (!canvas) return;

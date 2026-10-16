@@ -91,31 +91,43 @@
           <div><h4>Air-traffic sector occupancy</h4><p class="muted">Julia</p></div>
           <p>A stochastic model of how demand and limited capacity create congestion in a control sector. Kinetic Monte Carlo with an arrival rate that depends on the hour and the day of the week, ensembles of 1,000 trajectories, overload probability and the cost of congestion on busy and quiet days.</p>
           <a href="https://github.com/JRodriguezToledo/AirTrafficOccupancy">View on GitHub<span class="sr"> (AirTrafficOccupancy)</span></a>
+        
+          <div class="figs"><figure><button type="button" class="fig" data-full="assets/figures/air-1.webp" data-cap="Aircraft in the sector over one week: sample trajectories, their mean and the one-standard-deviation band."><img src="assets/figures/air-1.webp" width="1247" height="917" alt="Aircraft in the sector over one week: sample trajectories from the simulation, their mean and a one-standard-deviation band, with the daily and weekly rhythm of demand." loading="lazy"></button><figcaption>Aircraft in the sector over one week: sample trajectories, their mean and the one-standard-deviation band.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/figures/air-2.webp" data-cap="Probability that the sector is over capacity during the week."><img src="assets/figures/air-2.webp" width="1263" height="546" alt="Probability that the sector is over capacity at each hour of the week, higher on Friday to Sunday." loading="lazy"></button><figcaption>Probability that the sector is over capacity during the week.</figcaption></figure></div>
         </li>
         <li>
           <div><h4>Hospital readmission prediction</h4><p class="muted">Python</p></div>
           <p>Eight classifiers, from logistic regression to XGBoost, compared on 5,000 diabetic patient records. A cost matrix penalises missed readmissions, and models are chosen by cross-validated performance, with ROC curves, confusion matrices and feature importance.</p>
           <a href="https://github.com/JRodriguezToledo/HospitalReadmissionPrediction">View on GitHub<span class="sr"> (HospitalReadmissionPrediction)</span></a>
+        
+          <div class="figs"><figure><button type="button" class="fig" data-full="assets/figures/hosp-1.webp" data-cap="Cross-validated accuracy, AUC and cost of the eight classifiers."><img src="assets/figures/hosp-1.webp" width="822" height="435" alt="Bar chart of cross-validated accuracy, AUC and cost for eight classifiers." loading="lazy"></button><figcaption>Cross-validated accuracy, AUC and cost of the eight classifiers.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/figures/hosp-2.webp" data-cap="ROC curves of the eight models."><img src="assets/figures/hosp-2.webp" width="415" height="369" alt="ROC curves for the eight classifiers, with the random-guess diagonal." loading="lazy"></button><figcaption>ROC curves of the eight models.</figcaption></figure></div>
         </li>
         <li>
           <div><h4>Character-level text prediction</h4><p class="muted">Python, TensorFlow</p></div>
           <p>A simple RNN, a GRU and a two-layer LSTM, each with and without self-attention, trained on Shakespeare to predict the next character. Six models in one reproducible notebook, with weights and training histories included.</p>
           <a href="https://github.com/JRodriguezToledo/Character-LevelTextPrediction">View on GitHub<span class="sr"> (Character-LevelTextPrediction)</span></a>
+        
+          <div class="figs one"><figure><button type="button" class="fig" data-full="assets/figures/char-1.webp" data-cap="Validation loss and accuracy for the six recurrent models during training."><img src="assets/figures/char-1.webp" width="1448" height="519" alt="Validation loss and validation accuracy by training epoch for six recurrent models." loading="lazy"></button><figcaption>Validation loss and accuracy for the six recurrent models during training.</figcaption></figure></div>
         </li>
         <li>
           <div><h4>The Greeks</h4><p class="muted">Python</p></div>
           <p>A sensitivity analysis of the Black–Scholes model: analytical Greeks, the trade-off between gamma and theta, dynamic delta hedging over 252 trading days, a gamma-squeeze Monte Carlo, and Greeks from a live SPY options chain.</p>
           <a href="https://github.com/JRodriguezToledo/TheGreeksOptionAnalysis">View on GitHub<span class="sr"> (TheGreeksOptionAnalysis)</span></a>
+        
+          <div class="figs"><figure><button type="button" class="fig" data-full="assets/figures/greeks-1.webp" data-cap="The five Greeks of a call and a put against the spot price."><img src="assets/figures/greeks-1.webp" width="1500" height="846" alt="Delta, gamma, theta, vega and rho of a call and a put as functions of the spot price." loading="lazy"></button><figcaption>The five Greeks of a call and a put against the spot price.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/figures/greeks-2.webp" data-cap="Dynamic delta hedging: the effect of how often the hedge is rebalanced."><img src="assets/figures/greeks-2.webp" width="1500" height="1027" alt="Dynamic delta hedging: simulated price path, hedge profit and loss for three rebalancing frequencies, final-profit distribution and hedging error against rebalancing frequency." loading="lazy"></button><figcaption>Dynamic delta hedging: the effect of how often the hedge is rebalanced.</figcaption></figure></div>
         </li>
         <li>
           <div><h4>Western US power grid</h4><p class="muted">Python</p></div>
           <p>How robust is a real power grid? Clustering, distances, centrality and community detection, compared against Erdős–Rényi and Barabási–Albert random networks.</p>
           <a href="https://github.com/JRodriguezToledo/PowerGridNetworkAnalysis">View on GitHub<span class="sr"> (PowerGridNetworkAnalysis)</span></a>
+        
+          <div class="figs"><figure><button type="button" class="fig" data-full="assets/figures/pg-1.webp" data-cap="The Western US power grid, coloured by betweenness centrality."><img src="assets/figures/pg-1.webp" width="666" height="594" alt="Network drawing of the Western US power grid, nodes coloured by betweenness centrality." loading="lazy"></button><figcaption>The Western US power grid, coloured by betweenness centrality.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/figures/pg-2.webp" data-cap="Communities found in the grid."><img src="assets/figures/pg-2.webp" width="578" height="514" alt="Network drawing of the Western US power grid with nodes coloured by community." loading="lazy"></button><figcaption>Communities found in the grid.</figcaption></figure></div>
         </li>
         <li>
           <div><h4>2D Ising model</h4><p class="muted">Julia</p></div>
           <p>Metropolis Monte Carlo on a periodic lattice: energy, magnetisation, heat capacity and susceptibility, the critical temperature and exponents, and finite-size scaling with data collapse.</p>
           <a href="https://github.com/JRodriguezToledo/2DIsingModel">View on GitHub<span class="sr"> (2DIsingModel)</span></a>
+        
+          <div class="figs"><figure><button type="button" class="fig" data-full="assets/figures/ising-1.webp" data-cap="Energy, magnetisation, specific heat and susceptibility for lattice sizes L = 4 to 64."><img src="assets/figures/ising-1.webp" width="898" height="604" alt="Energy, magnetisation, specific heat and susceptibility against temperature for lattice sizes from 4 to 64." loading="lazy"></button><figcaption>Energy, magnetisation, specific heat and susceptibility for lattice sizes L = 4 to 64.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/figures/ising-2.webp" data-cap="Magnetisation and susceptibility collapse onto single curves under finite-size scaling."><img src="assets/figures/ising-2.webp" width="1500" height="626" alt="Magnetisation and susceptibility data collapse onto single curves under finite-size scaling." loading="lazy"></button><figcaption>Magnetisation and susceptibility collapse onto single curves under finite-size scaling.</figcaption></figure></div>
         </li>
       </ul>
 
@@ -137,12 +149,16 @@
     <div class="wrap grid">
       <h2 id="bg-h">Background</h2>
       <div>
+        <h3 class="list-h first">Work experience</h3>
+        <ol class="timeline">
+          <li><time>Jun to Sep 2026</time><div><strong>Data scientist intern, Advanced Analytics</strong><br>Grupo Viajes El Corte Inglés, Palma de Mallorca.</div></li>
+          <li><time>Jan 2021 to Jun 2025</time><div><strong>Private tutor</strong><br>Mathematics, physics and chemistry for high-school students.</div></li>
+        </ol>
+        <h3 class="list-h">Education</h3>
         <ol class="timeline">
           <li><time>Sep 2025 to Dec 2026</time><div><strong>MSc Physics of Complex Systems</strong><br>Universitat de les Illes Balears, IFISC. Thesis on delay prediction in aviation networks.</div></li>
-          <li><time>Jun to Sep 2026</time><div><strong>Data scientist intern, Advanced Analytics</strong><br>Grupo Viajes El Corte Inglés, Palma de Mallorca.</div></li>
           <li><time>Sep 2021 to Jun 2025</time><div><strong>BSc Physics, theoretical physics</strong><br>Universidad Complutense de Madrid. Grade 8.11 / 10 (GPA 3.24 / 4). Final thesis on DFT simulations of oxide semiconductors graded 10 with honours.</div></li>
           <li><time>Sep 2023 to Jun 2024</time><div><strong>Erasmus+ exchange in Physics and Astronomy</strong><br>University of Amsterdam, as part of my BSc.</div></li>
-          <li><time>Jan 2021 to Jun 2025</time><div><strong>Private tutor</strong><br>Mathematics, physics and chemistry for high-school students.</div></li>
           <li><time>Graduated Jun 2021</time><div><strong>A Levels</strong><br>British School of Gran Canaria. Mathematics (A*), Physics (A*), Chemistry (A*) and Biology (A). Silver award in the UK Intermediate Mathematical Challenge, 2019.</div></li>
         </ol>
         <h3 class="list-h">Tools</h3>
@@ -176,6 +192,8 @@
     <p>The sky above is a fluid simulation adapted from Pavel Dobryakov's <a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation">WebGL-Fluid-Simulation</a> (MIT licence). Animation by <a href="https://gsap.com">GSAP</a>.</p>
   </div>
 </footer>
+
+<dialog class="lb" id="lb" aria-label="Enlarged figure"><img id="lbImg" alt=""><p id="lbCap"></p><button type="button" id="lbClose">Close</button></dialog>
 
 <script src="js/gsap.min.js"></script>
 <script src="js/fluid.js"></script>
