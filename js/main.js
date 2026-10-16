@@ -57,6 +57,19 @@
     });
   }
 
+  /* ---------- Coursework animations: play while visible ---------- */
+  var vids = document.querySelectorAll('.anims video');
+  if (vids.length) {
+    if (reduced || !('IntersectionObserver' in window)) {
+      vids.forEach(function (v) { v.controls = true; });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { var p = en.target.play(); if (p && p.catch) p.catch(function () {}); } else en.target.pause(); });
+      }, { threshold: 0.4 });
+      vids.forEach(function (v) { io.observe(v); });
+    }
+  }
+
   /* ---------- Sector occupancy simulation (illustrative) ---------- */
   var canvas = document.getElementById('chart');
   if (!canvas) return;
