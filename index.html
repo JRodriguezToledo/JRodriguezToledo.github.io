@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0b1b2e">
 <link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20261016i">
+<link rel="stylesheet" href="css/style.css?v=20261016j">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -75,27 +75,6 @@
           <div class="prose">
             <p>Flight delays do not stay where they start: a late aircraft delays the next flight, and the knock-on effect travels through airports and sectors. I am building machine and deep learning models that predict delays and how they propagate along the network, using EUROCONTROL data, so that operations and air traffic management stakeholders can decide better.</p>
             <p>The work is advanced Python for the numerical results and visualisations, plus the technical documentation. I will share results here if the thesis allows it.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="sim" aria-labelledby="sim-h">
-        <div class="grid">
-          <div>
-            <h3 id="sim-h">Try it: a sector fills up</h3>
-            <p class="muted">A small in-browser version of the model in my AirTrafficOccupancy project. The numbers are illustrative, not results.</p>
-            <div class="controls">
-              <label for="peak">Peak arrivals per hour <output id="peakOut">36</output></label>
-              <input id="peak" type="range" min="10" max="60" value="36">
-              <label for="cap">Capacity, aircraft in the sector <output id="capOut">12</output></label>
-              <input id="cap" type="range" min="4" max="30" value="12">
-              <button id="again" type="button">Run new random days</button>
-            </div>
-            <p class="readout" id="readout" aria-live="polite"></p>
-          </div>
-          <div>
-            <canvas id="chart" role="img" aria-label="Aircraft in the sector over two days for 30 simulated runs, with the capacity line"></canvas>
-            <p class="small muted">Thin lines are 30 random runs over two days. The white line is their average. Aircraft arrive faster in the morning and evening and each one leaves at a fixed rate. The orange line is capacity. The full Julia version runs 1,000 trajectories over one and three weeks and tracks the extra cost of congestion.</p>
           </div>
         </div>
       </article>
@@ -171,20 +150,11 @@ Thou f</pre></figure></div></div>
       </ul>
 
       <h3 class="list-h">More academic work: animations</h3>
-      <p class="muted lead">Animations from three master's courses: Complex Networks, Cooperative and Critical Phenomena, and Quantum Information.</p>
-      <h4 class="agroup">Network growth and a qubit on the Bloch sphere</h4>
+      <p class="muted lead">Animations from two master's courses: Complex Networks and Cooperative and Critical Phenomena.</p>
       <div class="anims">
         <figure><video muted loop playsinline preload="none" poster="assets/anim/ba-growth.jpg" aria-label="Animation of a Barabási–Albert network growing from three to thirty nodes"><source src="assets/anim/ba-growth.mp4" type="video/mp4"></video><figcaption>Barabási–Albert growth to 30 nodes: each new node tends to link to nodes that already have many links. Group project of three people, Complex Networks.</figcaption></figure>
-        <figure><video muted loop playsinline preload="none" poster="assets/anim/bloch.jpg" aria-label="Animation of a qubit state vector moving on the Bloch sphere"><source src="assets/anim/bloch.mp4" type="video/mp4"></video><figcaption>A qubit's state vector (red) moving on the Bloch sphere, with its path in blue. My own exercise, Quantum Information.</figcaption></figure>
+        <figure><video muted loop playsinline preload="none" poster="assets/anim/fire-3.jpg" aria-label="Animation of the forest-fire model with grass and water-dropping aircraft"><source src="assets/anim/fire-3.mp4" type="video/mp4"></video><figcaption>The forest-fire model extended with a grass layer and water-dropping aircraft. My numerical project, Cooperative and Critical Phenomena.</figcaption></figure>
       </div>
-      <h4 class="agroup">Cooperative and Critical Phenomena: the forest-fire model, my numerical project</h4>
-      <div class="anims">
-        <figure><video muted loop playsinline preload="none" poster="assets/anim/fire-1.jpg" aria-label="Animation of the Drossel–Schwabl forest-fire model on a square lattice"><source src="assets/anim/fire-1.mp4" type="video/mp4"></video><figcaption>The original Drossel–Schwabl forest-fire model: trees grow, burn and are ignited by lightning on a lattice, a classic example of self-organised criticality.</figcaption></figure>
-        <figure><video muted loop playsinline preload="none" poster="assets/anim/fire-3.jpg" aria-label="Animation of the forest-fire model with grass and water-dropping aircraft"><source src="assets/anim/fire-3.mp4" type="video/mp4"></video><figcaption>The model extended with a grass layer and water-dropping aircraft.</figcaption></figure>
-        
-      </div>
-
-      
     </div>
   </section>
 
@@ -202,10 +172,10 @@ Thou f</pre></figure></div></div>
     </div>
     <div class="wrap">
     <ol class="edu-list">
-          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-palma.webp" data-cap="Palma de Mallorca, with the cathedral La Seu."><img src="assets/photos/place-palma.webp" width="1100" height="733" alt="The cathedral of Palma de Mallorca seen across the lake of the Parc de la Mar in warm evening light, with palm trees along the promenade." loading="lazy"></button><figcaption>Palma de Mallorca, with the cathedral La Seu.</figcaption></figure></div><div class="entry"><div class="when"><time>Sep 2025 to Dec 2026</time><span class="place">Palma de Mallorca, Spain</span></div><div><strong>MSc Physics of Complex Systems</strong><br>Universitat de les Illes Balears, IFISC<br>Current grade 8.26 / 10 (GPA: 3.32 / 4)<br>Thesis on delay prediction in aviation networks</div></div></li>
-          <li class="edu-row"><div class="edu-left"></div><div class="entry"><div class="when"><time>Sep 2021 to Jun 2025</time><span class="place">Madrid, Spain</span></div><div><strong>BSc Physics, theoretical physics</strong><br>Universidad Complutense de Madrid<br>Grade 8.11 / 10 (GPA: 3.24 / 4)<br>Final thesis on DFT simulations of oxide semiconductors, graded 10 with honours</div></div></li>
-          <li class="edu-row"><div class="edu-left"></div><div class="entry"><div class="when"><time>Sep 2023 to Jun 2024</time><span class="place">Amsterdam, Netherlands</span></div><div><strong>Erasmus+ exchange in Physics and Astronomy</strong><br>University of Amsterdam<br>As part of my BSc</div></div></li>
-          <li class="edu-row"><div class="edu-left"></div><div class="entry"><div class="when"><time>Graduated Jun 2021</time><span class="place">Las Palmas, Spain</span></div><div><strong>A Levels</strong><br>British School of Gran Canaria<br>Mathematics (A*), Physics (A*), Chemistry (A*) and Biology (A)<br>Silver award in the UK Intermediate Mathematical Challenge, 2019</div></div></li>
+          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-palma.webp" data-cap="Palma de Mallorca, with the cathedral La Seu."><img src="assets/photos/place-palma.webp" width="1100" height="733" alt="The cathedral of Palma de Mallorca seen across the lake of the Parc de la Mar in warm evening light." style="object-position:50% 52%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2025 to Dec 2026</time><span class="place">Palma de Mallorca, Spain</span></div><div><strong>MSc Physics of Complex Systems</strong><br>Universitat de les Illes Balears, IFISC<br>Current grade 8.26 / 10 (GPA: 3.32 / 4)<br>Thesis on delay prediction in aviation networks</div></div></li>
+          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-madrid.webp" data-cap="Madrid: the Metrópolis building on Gran Vía at sunset."><img src="assets/photos/place-madrid.webp" width="1400" height="933" alt="Rooftop view of Madrid at sunset over Gran Vía, with the gilded dome of the Metrópolis building." style="object-position:50% 46%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2021 to Jun 2025</time><span class="place">Madrid, Spain</span></div><div><strong>BSc Physics, theoretical physics</strong><br>Universidad Complutense de Madrid<br>Grade 8.11 / 10 (GPA: 3.24 / 4)<br>Final thesis on DFT simulations of oxide semiconductors, graded 10 with honours</div></div></li>
+          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-amsterdam.webp" data-cap="Amsterdam: canal houses reflected in the water."><img src="assets/photos/place-amsterdam.webp" width="640" height="637" alt="Amsterdam canal houses with their reflection in the water under a blue sky." style="object-position:50% 30%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2023 to Jun 2024</time><span class="place">Amsterdam, Netherlands</span></div><div><strong>Erasmus+ exchange in Physics and Astronomy</strong><br>University of Amsterdam<br>As part of my BSc</div></div></li>
+          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-laspalmas.webp" data-cap="Gran Canaria: the dunes."><img src="assets/photos/place-laspalmas.webp" width="888" height="500" alt="Golden sand dunes with the Atlantic Ocean behind them on Gran Canaria." style="object-position:50% 62%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Graduated Jun 2021</time><span class="place">Las Palmas, Spain</span></div><div><strong>A Levels</strong><br>British School of Gran Canaria<br>Mathematics (A*), Physics (A*), Chemistry (A*) and Biology (A)<br>Silver award in the UK Intermediate Mathematical Challenge, 2019</div></div></li>
         </ol>
     <div class="grid after-edu"><span></span>
       <div>
@@ -244,8 +214,8 @@ Thou f</pre></figure></div></div>
 
 <dialog class="lb" id="lb" aria-label="Enlarged figure"><img id="lbImg" alt=""><p id="lbCap"></p><button type="button" id="lbClose">Close</button></dialog>
 
-<script src="js/gsap.min.js?v=20261016i"></script>
-<script src="js/fluid.js?v=20261016i"></script>
-<script src="js/main.js?v=20261016i"></script>
+<script src="js/gsap.min.js?v=20261016j"></script>
+<script src="js/fluid.js?v=20261016j"></script>
+<script src="js/main.js?v=20261016j"></script>
 </body>
 </html>
