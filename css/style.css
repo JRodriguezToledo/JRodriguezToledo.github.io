@@ -214,3 +214,7 @@ h4.agroup { margin:1.8rem 0 .8rem; font-size:1.1rem }
 .sample-grid { align-items:stretch }
 .sample-grid figure { display:flex; flex-direction:column }
 .sample-grid pre { height:auto !important; flex:1 }
+
+/* the Amsterdam photo gets a taller frame so the sky and whole facades show */
+.edu-row.tall .edu-left { aspect-ratio:1.94 / 1 }
+@media (max-width:820px) { .edu-row.tall .edu-left { aspect-ratio:1.94 / 1 } }
