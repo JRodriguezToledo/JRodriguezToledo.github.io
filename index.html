@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0b1b2e">
 <link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20261016f">
+<link rel="stylesheet" href="css/style.css?v=20261016h">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -34,7 +34,7 @@
   <section class="band" id="about" aria-labelledby="about-h">
     <div class="wrap grid">
       <div class="aboutleft"><h2 id="about-h">Why aviation, why data</h2>
-        <img class="portrait" src="assets/photo.jpg" width="360" height="505" alt="Portrait of Jorge Rodríguez Toledo in a suit and tie" loading="lazy"></div>
+        <div class="portrait-wrap"><img class="portrait" src="assets/photo.jpg" width="360" height="505" alt="Portrait of Jorge Rodríguez Toledo in a suit and tie" loading="lazy"></div></div>
       <div class="prose">
         <p>As a kid I wanted to be a pilot. I chose theoretical physics instead because hard problems and abstract ideas keep me going, but I never lost my interest in aircraft. Air traffic management is where the two meet: a huge system where good analysis changes real decisions.</p>
         <p>I am finishing an MSc in Physics of Complex Systems at IFISC, University of the Balearic Islands. My thesis uses machine and deep learning on EUROCONTROL data to predict flight delays and how they propagate through the aviation network. In summer 2026 I worked at Grupo Viajes El Corte Inglés, where I built a support agent with retrieval-augmented generation and helped take a churn model into production.</p>
@@ -50,6 +50,20 @@
   <section class="band tint" id="work" aria-labelledby="work-h">
     <div class="wrap">
       <h2 id="work-h" class="solo">Selected work</h2>
+
+      <h3 class="list-h first">Built at work, not public</h3>
+      <ul class="projects">
+        <li>
+          <div><h4>Support agent for business teams</h4><p class="muted">Grupo Viajes El Corte Inglés, MVP</p></div>
+          <p>An LLM application with a retrieval-augmented generation system. Business workers ask it instead of reading long documentation, and technicians stop solving the same problem again and again: the agent either fixes it or gives the user the steps. I designed the evaluation pipeline (an LLM judge, evaluation of the retrieved sources, prompt engineering) and connected databases with SQL in BigQuery, documents, search engines and APIs, including through MCP and A2A. It runs on Google ADK, Gemini Enterprise and Azure, over 18 technical documents and about 9,000 historical support tickets.</p>
+        </li>
+        <li>
+          <div><h4>Customer churn model</h4><p class="muted">Grupo Viajes El Corte Inglés, in production</p></div>
+          <p>A customer-lifetime-value churn model that helps the Business department take strategy decisions based on sales probabilities. I tuned, calibrated and evaluated it in Databricks, and used feature analysis to find what drives the number of purchases before a customer leaves.</p>
+        </li>
+      </ul>
+      <div class="photos"><figure><button type="button" class="fig" data-full="assets/photos/work-1.webp" data-cap="Summer 2026 at Grupo Viajes El Corte Inglés in Palma de Mallorca."><img src="assets/photos/work-1.webp" width="900" height="1125" alt="Jorge smiling at the camera in a selfie against a blue sky, holding up his company badge on a green lanyard." loading="lazy"></button><figcaption>Summer 2026 at Grupo Viajes El Corte Inglés in Palma de Mallorca.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/photos/work-2.webp" data-cap="The Blue Building where I did my internship."><img src="assets/photos/work-2.webp" width="900" height="1125" alt="The entrance sign of the Blue Building, with the logos of Logitravel and Grupo Viajes El Corte Inglés." loading="lazy"></button><figcaption>The Blue Building where I did my internship.</figcaption></figure></div>
+
 
       <article class="feature" aria-labelledby="thesis-h">
         <div class="grid">
@@ -147,7 +161,7 @@ Thou f</pre></figure></div></div>
 
       <h3 class="list-h">Bachelor's thesis</h3>
       <ul class="projects">
-        <li>
+        <li class="wide">
           <div><h4>DFT simulations of α-MoO<sub>3</sub> for optoelectronics</h4><p class="muted">CRYSTAL, VESTA</p></div>
           <p>Density functional theory study of molybdenum trioxide, an oxide semiconductor used in optoelectronics. With the CRYSTAL code I computed the electronic band structure and density of states of the perfect crystal and with an oxygen vacancy at each of three oxygen sites, and I reviewed its use in solar cells, LEDs, electronic devices and photodetectors. Final thesis at the Universidad Complutense de Madrid, graded 10 with honours.</p>
           <span class="note">Written in Spanish; figure labels are in Spanish</span>
@@ -169,17 +183,7 @@ Thou f</pre></figure></div></div>
         
       </div>
 
-      <h3 class="list-h">Built at work, not public</h3>
-      <ul class="projects">
-        <li>
-          <div><h4>Support agent for business teams</h4><p class="muted">Grupo Viajes El Corte Inglés, MVP</p></div>
-          <p>An LLM application with a retrieval-augmented generation system. Business workers ask it instead of reading long documentation, and technicians stop solving the same problem again and again: the agent either fixes it or gives the user the steps. I designed the evaluation pipeline (an LLM judge, evaluation of the retrieved sources, prompt engineering) and connected databases with SQL in BigQuery, documents, search engines and APIs, including through MCP and A2A. It runs on Google ADK, Gemini Enterprise and Azure, over 18 technical documents and about 9,000 historical support tickets.</p>
-        </li>
-        <li>
-          <div><h4>Customer churn model</h4><p class="muted">Grupo Viajes El Corte Inglés, in production</p></div>
-          <p>A customer-lifetime-value churn model that helps the Business department take strategy decisions based on sales probabilities. I tuned, calibrated and evaluated it in Databricks, and used feature analysis to find what drives the number of purchases before a customer leaves.</p>
-        </li>
-      </ul>
+      
     </div>
   </section>
 
@@ -233,8 +237,8 @@ Thou f</pre></figure></div></div>
 
 <dialog class="lb" id="lb" aria-label="Enlarged figure"><img id="lbImg" alt=""><p id="lbCap"></p><button type="button" id="lbClose">Close</button></dialog>
 
-<script src="js/gsap.min.js?v=20261016f"></script>
-<script src="js/fluid.js?v=20261016f"></script>
-<script src="js/main.js?v=20261016f"></script>
+<script src="js/gsap.min.js?v=20261016h"></script>
+<script src="js/fluid.js?v=20261016h"></script>
+<script src="js/main.js?v=20261016h"></script>
 </body>
 </html>
