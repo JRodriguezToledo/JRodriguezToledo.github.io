@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0b1b2e">
 <link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20261016k">
+<link rel="stylesheet" href="css/style.css?v=20261016m">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -95,7 +95,7 @@
         
           <div class="figs"><figure><button type="button" class="fig" data-full="assets/figures/hosp-1.webp" data-cap="Cross-validated accuracy, AUC and cost of the eight classifiers."><img src="assets/figures/hosp-1.webp" width="822" height="435" alt="Bar chart of cross-validated accuracy, AUC and cost for eight classifiers." loading="lazy"></button><figcaption>Cross-validated accuracy, AUC and cost of the eight classifiers.</figcaption></figure><figure><button type="button" class="fig" data-full="assets/figures/hosp-2.webp" data-cap="ROC curves of the eight models."><img src="assets/figures/hosp-2.webp" width="415" height="369" alt="ROC curves for the eight classifiers, with the random-guess diagonal." loading="lazy"></button><figcaption>ROC curves of the eight models.</figcaption></figure></div>
         </li>
-        <li>
+        <li class="has-samples">
           <div><h4>Character-level text prediction</h4><p class="muted">Python, TensorFlow</p></div>
           <p>A simple RNN, a GRU and a two-layer LSTM, each with and without self-attention, trained on Shakespeare to predict the next character. Six models in one reproducible notebook, with weights and training histories included.</p>
           <a href="https://github.com/JRodriguezToledo/Character-LevelTextPrediction">View on GitHub<span class="sr"> (Character-LevelTextPrediction)</span></a>
@@ -174,7 +174,7 @@ Thou f</pre></figure></div></div>
     <ol class="edu-list">
           <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-palma.webp" data-cap="Palma de Mallorca, with the cathedral La Seu."><img src="assets/photos/place-palma.webp" width="1100" height="733" alt="The cathedral of Palma de Mallorca seen across the lake of the Parc de la Mar in warm evening light." style="object-position:50% 52%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2025 to Dec 2026</time><span class="place">Palma de Mallorca, Spain</span></div><div><strong>MSc Physics of Complex Systems</strong><br>Universitat de les Illes Balears, IFISC<br>Current grade 8.26 / 10 (GPA: 3.32 / 4)<br>Thesis on delay prediction in aviation networks</div></div></li>
           <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-madrid.webp" data-cap="Madrid: the Metrópolis building on Gran Vía at sunset."><img src="assets/photos/place-madrid.webp" width="1400" height="933" alt="Rooftop view of Madrid at sunset over Gran Vía, with the gilded dome of the Metrópolis building." style="object-position:50% 46%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2021 to Jun 2025</time><span class="place">Madrid, Spain</span></div><div><strong>BSc Physics, theoretical physics</strong><br>Universidad Complutense de Madrid<br>Grade 8.11 / 10 (GPA: 3.24 / 4)<br>Final thesis on DFT simulations of oxide semiconductors, graded 10 with honours</div></div></li>
-          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-amsterdam.webp" data-cap="Amsterdam: canal houses reflected in the water."><img src="assets/photos/place-amsterdam.webp" width="640" height="637" alt="Amsterdam canal houses with their reflection in the water under a blue sky." style="object-position:50% 30%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2023 to Jun 2024</time><span class="place">Amsterdam, Netherlands</span></div><div><strong>Erasmus+ exchange in Physics and Astronomy</strong><br>University of Amsterdam<br>As part of my BSc</div></div></li>
+          <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-amsterdam.webp" data-cap="Amsterdam: canal houses."><img src="assets/photos/place-amsterdam.webp" width="640" height="244" alt="Amsterdam canal houses under a blue sky." style="object-position:50% 50%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Sep 2023 to Jun 2024</time><span class="place">Amsterdam, Netherlands</span></div><div><strong>Erasmus+ exchange in Physics and Astronomy</strong><br>University of Amsterdam and Vrije Universiteit Amsterdam<br>Grade 8.09 / 10 (GPA: 3.24 / 4)<br>As part of my BSc</div></div></li>
           <li class="edu-row"><div class="edu-left"><figure class="edu-photo"><button type="button" class="fig" data-full="assets/photos/place-laspalmas.webp" data-cap="Gran Canaria: the dunes."><img src="assets/photos/place-laspalmas.webp" width="888" height="500" alt="Golden sand dunes with the Atlantic Ocean behind them on Gran Canaria." style="object-position:50% 62%" loading="lazy"></button></figure></div><div class="entry"><div class="when"><time>Graduated Jun 2021</time><span class="place">Las Palmas, Spain</span></div><div><strong>A Levels</strong><br>British School of Gran Canaria<br>Mathematics (A*), Physics (A*), Chemistry (A*) and Biology (A)<br>Silver award in the UK Intermediate Mathematical Challenge, 2019</div></div></li>
         </ol>
     <div class="tools-block">
@@ -206,14 +206,15 @@ Thou f</pre></figure></div></div>
 
 <footer class="foot">
   <div class="wrap">
+    <p class="copy">Copyright © 2026 Jorge Rodríguez Toledo</p>
     <p>The sky above is a fluid simulation adapted from Pavel Dobryakov's <a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation">WebGL-Fluid-Simulation</a> (MIT licence). Animation by <a href="https://gsap.com">GSAP</a>.</p>
   </div>
 </footer>
 
 <dialog class="lb" id="lb" aria-label="Enlarged figure"><img id="lbImg" alt=""><p id="lbCap"></p><button type="button" id="lbClose">Close</button></dialog>
 
-<script src="js/gsap.min.js?v=20261016k"></script>
-<script src="js/fluid.js?v=20261016k"></script>
-<script src="js/main.js?v=20261016k"></script>
+<script src="js/gsap.min.js?v=20261016m"></script>
+<script src="js/fluid.js?v=20261016m"></script>
+<script src="js/main.js?v=20261016m"></script>
 </body>
 </html>

@@ -200,3 +200,17 @@ h4.agroup { margin:1.8rem 0 .8rem; font-size:1.1rem }
 .tools-block .tools { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(1.5rem,5vw,4.5rem) }
 .tools-block .tools dd { max-width:none }
 @media (max-width:820px) { .tools-block .tools { grid-template-columns:1fr; gap:1.2rem } }
+
+/* bachelor's thesis: no rule between the heading and the row; rule between the generated texts and the next project */
+.projects li.wide { border-top:0; padding-top:0 }
+.samples { margin-bottom:1.4rem; padding-bottom:1.6rem; border-bottom:1px solid var(--line) }
+.projects li.has-samples + li { border-top:0; padding-top:1.5rem }
+.foot .copy { margin:0 0 .6rem; color:#eaf2fa; font-weight:600 }
+
+.projects li.has-samples { padding-bottom:0 }
+.projects li.has-samples .samples { margin-bottom:0 }
+
+/* generated-text boxes: equal heights without percentage heights */
+.sample-grid { align-items:stretch }
+.sample-grid figure { display:flex; flex-direction:column }
+.sample-grid pre { height:auto !important; flex:1 }
