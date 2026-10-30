@@ -218,3 +218,9 @@ h4.agroup { margin:1.8rem 0 .8rem; font-size:1.1rem }
 /* the Amsterdam photo gets a taller frame so the sky and whole facades show */
 .edu-row.tall .edu-left { aspect-ratio:1.94 / 1 }
 @media (max-width:820px) { .edu-row.tall .edu-left { aspect-ratio:1.94 / 1 } }
+
+/* language switch in the nav */
+.nav { align-items:center }
+.langbtn, .langbtn:hover { margin:0; padding:.25rem .7rem; background:transparent; color:#eaf2fa; border:1.5px solid rgba(234,242,250,.55); border-radius:4px; font:inherit; font-weight:600; font-size:.85rem; letter-spacing:.04em; cursor:pointer }
+.langbtn:hover { background:var(--signal); border-color:var(--signal); color:var(--night) }
+.hero{min-height:560px !important;height:560px}
